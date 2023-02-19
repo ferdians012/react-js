@@ -1,0 +1,92 @@
+//Create User
+POST http://localhost:5004/users
+Content-Type: application/json
+
+{
+    "name" : "Wawdan",
+    "email": "wawdan@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+
+###
+//Get All User
+GET http://localhost:5004/users
+###
+//Get Single User
+GET http://localhost:5004/users/12ce8697-f8e7-4e5e-b494-0ec0194cd53c
+
+###
+//Update User
+PATCH  http://localhost:5004/users/12ce8697-f8e7-4e5e-b494-0ec0194cd53c
+Content-Type: application/json
+
+{
+    "name" : "WawdanASS",
+    "email": "wawdan@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+//Delete User
+DELETE http://localhost:5004/users/12ce8697-f8e7-4e5e-b494-0ec0194cd53c
+
+###
+//Login Admin
+POST   http://localhost:5004/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
+###
+//Login User
+POST   http://localhost:5004/login
+Content-Type: application/json
+
+{
+    "email": "wawan@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:5004/me
+
+###
+//Logout
+DELETE  http://localhost:5004/logout
+
+###
+//Get All Product
+GET http://localhost:5004/products
+###
+//Get Single Product
+GET http://localhost:5004/products/9b1c5bca-e673-40a0-8873-3a75212bf4c0
+
+###
+//create product
+POST   http://localhost:5004/products
+Content-Type: application/json
+
+{
+    "name": "Smarggggt 34",
+    "price": "700400"
+}
+
+###
+//updatte product
+PATCH    http://localhost:5004/products/bb467206-3e90-4c5a-b628-4bc396fab27f
+Content-Type: application/json
+
+{
+    "name": "Tsel 1",
+    "price": "50000"
+}
+
+###
+//delete product
+DELETE   http://localhost:5004/products/86427380-0437-4329-a748-57eb407565e6
